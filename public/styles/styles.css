@@ -1,0 +1,30 @@
+/* style.css */
+
+/* Cor de fundo da tela */
+body {
+    background-color: #f0f7fa; /* Azul claro */
+}
+
+/* Define a cor de fundo da tabela */
+.table {
+    background-color: #ffffff; /* Branco */
+}
+
+/* Define cores diferentes para as linhas da tabela */
+.table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Branco */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cinza claro */
+}
+
+/* Cor de fundo do cabeçalho da tabela */
+.table thead {
+    background-color: #b3e0ff; /* Azul claro */
+}
+
+/* Cor de fundo ao passar o mouse sobre as linhas */
+.table-hover tbody tr:hover {
+    background-color: #ffa64d; /* Laranja claro */
+}
