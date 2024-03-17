@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Aviões</title>
+    <!-- Adicionar CSS do DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <!-- Adicionar jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Adicionar DataTables JavaScript -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Lista de Aviões</h1>
+        <!-- Tabela -->
+        <table id="airplanes-table" class="display">
+            <thead>
+                <tr>
+                    <th>Companhia Aérea</th>
+                    <th>Número do Voo</th>
+                    <th>Cidade de Destino</th>
+                    <th>Portão de Embarque</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os dados das aeronaves serão carregados dinamicamente aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready( function () {
+            // Inicializar o DataTables
+            $('#airplanes-table').DataTable({
+                "ajax": {
+                    "url": "http://localhost:3001/airplanes", // URL para buscar os dados
+                    "dataSrc": "" // Indica que os dados não estão em um objeto com uma chave de dados
+                },
+                "columns": [
+                    { "data": "companyName" }, // Mapear a propriedade "companyName" do JSON para a primeira coluna
+                    { "data": "flightNumber" },
+                    { "data": "destinationCity" },
+                    { "data": "boardingGate" }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

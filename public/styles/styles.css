@@ -1,30 +1,25 @@
-/* style.css */
-
 /* Cor de fundo da tela */
 body {
+    margin-left: 20ex;
+    margin-right: 20ex;
     background-color: #f0f7fa; /* Azul claro */
 }
 
-/* Define a cor de fundo da tabela */
-.table {
-    background-color: #ffffff; /* Branco */
-}
-
-/* Define cores diferentes para as linhas da tabela */
-.table tbody tr:nth-child(odd) {
-    background-color: #ffffff; /* Branco */
-}
-
-.table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Cinza claro */
-}
-
-/* Cor de fundo do cabeçalho da tabela */
+/* Define a cor de fundo do cabeçalho da tabela */
 .table thead {
     background-color: #b3e0ff; /* Azul claro */
 }
 
+/* Define cores diferentes para as linhas da tabela */
+.table-hover tbody tr:nth-of-type(odd) {
+    background-color: #ffe5cc; /* Laranja fraco */
+}
+
+.table-hover tbody tr:nth-of-type(even) {
+    background-color: #ffffff; /* Branco */
+}
+
 /* Cor de fundo ao passar o mouse sobre as linhas */
 .table-hover tbody tr:hover {
-    background-color: #ffa64d; /* Laranja claro */
+    background-color: #e0e0e0; /* Cinza claro */
 }
